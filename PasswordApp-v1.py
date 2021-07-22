@@ -1,3 +1,5 @@
+# Must install the PyQt5 via terminal: python -m pip install PyQt5
+
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMessageBox
 from PyQt5.QtGui import QIcon
@@ -9,16 +11,15 @@ def window():
 
     button1 = QPushButton(widget)
     button1.setText("Secure Password")
-    button1.move(64, 32)
+    button1.move(350, 400)
     button1.clicked.connect(button1_clicked)
-
 
     button2 = QPushButton(widget)
     button2.setText("Insane Secure Password")
-    button2.move(64, 64)
+    button2.move(300, 500)
     button2.clicked.connect(button2_clicked)
 
-    widget.setGeometry(50, 50, 320, 200)
+    widget.setGeometry(1000, 1000, 1000, 1000)
     widget.setWindowTitle("Generate Secure Password")
     widget.show()
     sys.exit(app.exec_())
